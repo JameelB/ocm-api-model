@@ -31,7 +31,8 @@ resource ExternalAuths {
     }
 
 	// Adds a new external authentication provider to the cluster.
-	method Add {
+	@go(name="Add")
+	method AsyncAdd {
 		// Description of the external authentication provider.
 		in out Body ExternalAuth
 	}
